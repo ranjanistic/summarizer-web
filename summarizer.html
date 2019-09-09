@@ -4,13 +4,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-16LE">
         <link rel="stylesheet" href="assets/Raleway.css">
-        <meta name="theme-color" content="#000">
+        <meta name="theme-color" content="#3f51b5">
         <link rel="stylesheet" href="assets/fmt.css">
         <link rel="icon" href="assets/summarIcon.png">
     </head>
     <style>
         html{
             scroll-behavior: smooth;
+        }
+        body{
+            font-family: 'Raleway';
         }
      h2{
          font-family: 'Raleway'
@@ -19,10 +22,17 @@
         font-family: 'Raleway';
         background: indigo
      }
+     #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display:inline-block;
+      transition: top 1.5s;
+    }
     </style>
     <body bgcolor="purple">
         <div class="fall-back fmt-row" style="padding-bottom: 100px " id="welcome">
-            <div class="fmt-col l7 fmt-left fmt-round" style="margin-top: 93px">
+            <div class="fmt-col l7 fmt-hide-small fmt-hide-medium fmt-left fmt-round" style="margin-top: 93px">
                 <div class="fmt-card">
                 <div class="fmt-row fmt-left" style="font-size: 44px; color:rgb(255, 255, 255); padding: 44px; margin: 22px">
                     Welcome, Earthling!<br/><h2>Get the thing for which you came here.</h2>
@@ -52,18 +62,69 @@
                 </div>
             </div>
             
-            <div class="fmt-col l4 fmt-right" style="margin-top: 60px">
+            <div class="fmt-col l7 fmt-hide-large fmt-left fmt-round" style="margin-top: 0px" >
+                <div class="fmt-card fmt-top fmt-indigo" id="navbar">
+                <div class="fmt-row fmt-left" style="font-size: 54px; color:rgb(255, 255, 255); padding: 44px; margin: 22px">
+                    Welcome, Earthling!<br/><h2>Get the thing for which you came here.</h2>
+                </div>
+                <div class="fmt-row ">
+                    <a href="https://github.com/ranjanistic/summarizer">
+                        <div class="fmt-col m4 fmt-hover-shadow fmt-right fmt-btn fmt-ripple  fmt-teal fmt-card fmt-round-large" style="font-size: 28px; padding:34px; margin: 40px">
+                            <object class="fmt-left" type="image/svg+xml" data="assets/google-play-brands.svg" height="40px" width="40px"></object>
+                            Download
+                        </div>
+                    </a>
+                    <div class="fmt-col m2" style="margin-top:22px">
+                            <a href="#segmentSmall">
+                                <div class="fmt-button fmt-text-white fmt-transparent fmt-border-large fmt-round-jumbo fmt-hover-text-black" style="font-size: 23px; padding: 34px; margin-left: 62px" >
+                                    Wut?
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="fmt-col l4 fmt-right fmt-hide-small fmt-hide-medium" style="margin-top: 50px">
+                    <object class="fmt-center" type="image/svg+xml" data="assets/summarizer-preview1.svg" width="100%"></object>
+                </div>
+            <div class="fmt-col l4 fmt-right fmt-hide-large" style="margin-top: 560px">
                 <object class="fmt-center" type="image/svg+xml" data="assets/summarizer-preview1.svg" width="100%"></object>
             </div>
         </div>
 
-        <div class="fmt-card fmt-row" id="segment">
-            <div class="fmt-col l4 fmt-left" style="padding-top: 0px">
+        <div class="fmt-card fmt-row">
+            <div class="fmt-col l4 fmt-left fmt-hide-medium fmt-hide-small" style="padding-top: 0px"  id="segment">
                 <object class="fmt-left" type="image/svg+xml" data="assets/summarizer-preview2.svg" width="150%" id="secondpreview"></object>
             </div>
-            <div class="fmt-col l5 fmt-right fmt-indigo fmt-card fmt-round" style="padding: 100px; margin-top: 50px">
-                Hello!
+            <div class="fmt-hide-large fmt-center" style="font-size: 74px; font-family: Raleway; color: white; padding-top: 140px"  id="segmentSmall">
+                What if...
+                <br>
+                <p class="fmt-center" style="font-size: 32px">
+                    You'll never know, right?
+                </p>
+            </div>
+            <div class="fmt-col l4 fmt-left fmt-hide-large" style="padding-top: 50px">
+                <object class="fmt-left" type="image/svg+xml" data="assets/summarizer-preview2.svg" width="100%" id="secondpreview"></object>
+            </div>
+            <div class="fmt-col l5 fmt-right fmt-indigo fmt-center fmt-card fmt-round" style="padding: 100px; margin-top: 50px">
+                Priyanshu Ranjan | 2019
             </div>
         </div>
     </body>
+
+    <script>
+            let prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-270px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+    </script>
 </html>
