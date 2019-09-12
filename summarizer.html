@@ -54,7 +54,7 @@
                 </div>
                 </div>
                 <div class="fmt-row fmt-padding-32">
-                    <a href="#segment">
+                    <a href="#section2">
                         <div class="fmt-button fmt-text-white fmt-transparent fmt-border-large fmt-round-jumbo fmt-hover-text-black" style="font-size: 23px; padding: 22px; margin-left: 62px" >
                             Wut?
                         </div>
@@ -65,7 +65,8 @@
             <div class="fmt-col l7 fmt-hide-large fmt-left fmt-round" style="margin-top: 0px" >
                 <div class="fmt-card fmt-top fmt-indigo" id="navbar">
                 <div class="fmt-row fmt-left" style="font-size: 54px; color:rgb(255, 255, 255); padding: 44px; margin: 22px">
-                    Welcome, Earthling!<br/><h2>Get the thing for which you came here.</h2>
+                    Welcome, Earthling!<br/>
+                    <span style="font-size: 42px">Get the thing for which you came here.</span>
                 </div>
                 <div class="fmt-row ">
                     <a href="https://github.com/ranjanistic/summarizer">
@@ -75,8 +76,8 @@
                         </div>
                     </a>
                     <div class="fmt-col m2" style="margin-top:22px">
-                            <a href="#segmentSmall">
-                                <div class="fmt-button fmt-text-white fmt-transparent fmt-border-large fmt-round-jumbo fmt-hover-text-black" style="font-size: 23px; padding: 34px; margin-left: 62px" >
+                            <a href="#section2">
+                                <div class="fmt-button fmt-text-white fmt-transparent fmt-border-large fmt-round-jumbo fmt-hover-text-black" style="font-size: 23px; padding: 34px; margin-left: 62px" onclick="raiser()">
                                     Wut?
                                 </div>
                             </a>
@@ -94,25 +95,75 @@
                 <object class="fmt-center" type="image/svg+xml" data="assets/summarizer-preview1.svg" width="100%"></object>
             </div>
         </div>
-
-        <div class="fmt-card fmt-row">
+        <div class="fmt-row fmt-purple "  id="section2">
             <div class="fmt-col l4 fmt-left fmt-hide-medium fmt-hide-small" style="padding-top: 0px"  id="segment">
                 <object class="fmt-left" type="image/svg+xml" data="assets/summarizer-preview2.svg" width="150%" id="secondpreview"></object>
             </div>
             <div class="fmt-hide-large fmt-center" style="font-size: 74px; font-family: Raleway; color: white; padding-top: 140px"  id="segmentSmall">
                 What if...
                 <br>
-                <p class="fmt-center" style="font-size: 32px">
+                <p class="fmt-center" style="font-size: 42px">
                     You'll never know, right?
                 </p>
             </div>
             <div class="fmt-col l4 fmt-left fmt-hide-large" style="padding-top: 50px">
                 <object class="fmt-left" type="image/svg+xml" data="assets/summarizer-preview2.svg" width="100%" id="secondpreview"></object>
             </div>
-            <div class="fmt-col l5 fmt-right fmt-indigo fmt-center fmt-card fmt-round" style="padding: 100px; margin-top: 50px">
-                Priyanshu Ranjan | 2019
+            <div class="fmt-col l5 fmt-right fmt-indigo fmt-hide-small fmt-hide-medium fmt-card fmt-round" style="padding: 100px; margin-top: 50px">
+                <div class="fmt-row fmt-center" style="font-size: 35px">
+                    What if...
+                </div>
+                <div class="fmt-padding-32" style="font-size: 25px; text-align: start">
+                    Most products and digital utilities have a terms and conditons doc, provided for you to read. Yet you know how 'short' it is.
+                    So you just skip the reading and agree to their terms. <br />
+                </div>
+                <a href="#section3">
+                <div class="fmt-btn fmt-right fmt-round-large fmt-teal fmt-ripple-hard" style="padding: 22px; font-size: 23px; font-weight: lighter" id="iagree"> 
+                     I agree
+                </div>
+                </a>
             </div>
         </div>
+
+        <div class=" fmt-row fmt-blue" id="section3" style="padding-top:50px">
+            <div class="fmt-col m3 fmt-round-jumbo fmt-left">
+                <div class="fmt-row fmt-card fmt-lime fmt-round-jumbo">
+                    <div class="fmt-left" style="font-size: 33px; padding-top: 44px; padding-left: 44px">
+                        Also...
+                    </div>
+                    <div class="fmt-left" style="font-size: 20px; padding: 44px;">
+                        Sometimes you have another priority, yet you also want to read that news.
+                        But the text is too long, and not your time.
+                    </div>
+                </div>
+                <br /><br />
+                <div class="fmt-row fmt-amber fmt-card fmt-round-jumbo" style="padding-top:12px">
+                    <div class="fmt-left" style="font-size: 33px; padding-top: 44px; padding-left: 44px">
+                        Also...
+                    </div>
+                    <div class="fmt-left" style="font-size: 20px; padding: 44px;">
+                        Sometimes you have another priority, yet you also want to read that news.
+                        But the text is too long, and not your time.
+                    </div>
+                </div>
+            </div>
+            <div class="fmt-col l6 fmt-center" style="padding-top: 50px; padding-bottom: 50px">
+                <object class="fmt-center" type="image/svg+xml" data="assets/summarizer-preview3.svg" width="90%" id="secondpreview"></object>
+            </div>
+            <div class="fmt-col m3 fmt-right fmt-khaki ">
+                Column 3
+            </div>
+
+        </div>
+        <div class="fmt-row" style="padding:100px">
+        </div>
+
+        <div class="fmt-bottom fmt-black" style="z-index: -3; padding: 100px">
+            <div class="fmt-center" style="font-size: 15px">
+                Priyanshu Ranjan | Summarizer Web | 2019
+            </div>
+        </div>
+
     </body>
 
     <script>
@@ -126,5 +177,11 @@
       }
       prevScrollpos = currentScrollPos;
     }
+
+//    function raiser(){
+  //      document.getElementById("section2").style.bottom = "-270px";
+    //    document.getElementById("iagree").style.bottom = "-270px";
+      //  document.getElementById("section2cont").style.position = "relative";
+    //}
     </script>
 </html>
