@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="assets/Raleway.css">
         <meta name="theme-color" content="#3f51b5">
         <link rel="stylesheet" href="assets/fmt.css">
-        <link rel="icon" href="assets/summarIcon.png">
+        <link rel="icon" href="assets/summaricon.png">
     </head>
     <style>
         html{
@@ -74,20 +74,20 @@
                 </div>
             </div>
 
-            <div class="fmt-col l7 fmt-hover-shadow fmt-hide-large fmt-top fmt-round" >
-                <div class="fmt-indigo " id="navbar">
-                <div class="fmt-row fmt-left" style="font-size: 54px; color:rgb(255, 255, 255); padding: 66px;">
-                    Welcome, Earthling!<br/>
-                    <span style="font-size: 42px">Get the thing for which you came here.</span>
-                </div>
-                <div class="fmt-row ">
-                    <a href="https://github.com/ranjanistic/summarizer">
-                        <div class="fmt-col m4 fmt-hover-shadow fmt-right fmt-btn fmt-ripple fmt-card fmt-round-large" style="font-size: 28px; padding:34px; margin-bottom: 40px; margin-right: 40px; color: white; background-color: #2c30ff" id="contributtsmall" onclick="contri()">
-                            <object class="fmt-left" type="image/svg+xml" data="assets/github.svg" height="40px" width="40px"></object>
-                            Contribute
-                        </div>
-                    </a>
-                    <div class="fmt-col m2" style="margin-top:2px">
+            <div class="fmt-col l7 fmt-hover-shadow fmt-hide-large fmt-top fmt-round">
+                <div class="fmt-indigo " id="navbar" style="border-bottom-left-radius:44px;border-bottom-right-radius:44px">
+                    <div class="fmt-row fmt-left" style="font-size: 54px; color:rgb(255, 255, 255); padding: 66px;">
+                        Welcome, Earthling!<br/>
+                        <span style="font-size: 42px">Get the thing for which you came here.</span>
+                    </div>
+                    <div class="fmt-row ">
+                        <a href="https://github.com/ranjanistic/summarizer">
+                            <div class="fmt-col m4 fmt-hover-shadow fmt-right fmt-btn fmt-ripple fmt-card fmt-round-large" style="font-size: 28px; padding:34px; margin-bottom: 40px; margin-right: 40px; color: white; background-color: #2c30ff" id="contributtsmall" onclick="contri()">
+                                <object class="fmt-left" type="image/svg+xml" data="assets/github.svg" height="40px" width="40px"></object>
+                                Contribute
+                            </div>
+                        </a>
+                        <div class="fmt-col m2" style="margin-top:2px">
                             <a href="#segmentSmall">
                                 <div class="fmt-button fmt-text-white fmt-transparent fmt-border-large fmt-round-jumbo fmt-hover-text-black fmt-ripple-hard" style="font-size: 23px; padding: 34px; margin-left: 62px" onclick="raiser()">
                                     Wut?
@@ -96,8 +96,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
 
             <div class="fmt-col l4 fmt-right fmt-hide-small fmt-hide-medium" style="margin-top: 50px">
@@ -178,7 +176,7 @@
             </div>
         </div>
 
-        <div class="fmt-hide-large fmt-center" style="background-color: #0d0f85; margin-top: 20px" >
+        <div class="fmt-hide-large fmt-center" style="background-color: #40545fff;border-radius:22px; margin-top: 20px" >
             <div class="fmt-row" style="color: white; padding-top: 90px">
                 <span style="font-size: 50px">
                     The text is too long,
@@ -207,24 +205,19 @@
                 </a>
             </div>
             <div class="fmt-row" style="padding: 100px;">
-                <object class="fmt-card fmt-round-jumbo fmt-yellow" type="image/svg+xml" data="assets/summarIconShadow.svg" style="border-radius:400px" width="80%" id="fourthpreviewsmall"></object>
+                <object type="image/svg+xml" data="assets/summarIconShadow.svg" width="80%" id="fourthpreviewsmall"></object>
             </div>
             <div style="color:white; font-weight: bold; font-size: 80px; padding-bottom: 100px">
                 #AskSummaryzer
             </div>
         </div>
-        <div class="fmt-indigo fmt-card fmt-hide-small fmt-padding-large" style="border: #070857 4px solid; border-radius: 35px; margin: 12px" id="quickstart">
-            <div class="fmt-center fmt-padding-64">
-                    <span style="font-size: 44px; color: white">Quick Start?</span><br />
-                    <span style="font-size: 18px; color: white">Simply paste your text here to summarize right now!</span>
-            </div>
-            <div class="">
-                    <input type="text" placeholder="Paste here to summarize" style="border: #1580e4 4px solid; border-top-left-radius:18px; border-bottom-right-radius: 18px; height: 322px;width: 322px; background-color: #515566;color: white">
-                    <button class="fmt-ripple" style="font-size: 33px; background-color: #851b0d; border:#851b0d 12px solid; border-radius: 8px; color:white">GO</button>
+        <div class="fmt-center fmt-padding-large" id="quickstart">
+            <div class="fmt-card fmt-btn fmt-ripple-soft" style="margin: 44px;padding: 22px;border-radius:12px; background-color:#fff; color:black" onclick="alert('Not available yet.')">
+                <object type="image/svg+xml" style="margin-top:12px" data="assets/google-play-brands.svg" width="40px" id="fourthpreviewsmall"></object><br>Download now
             </div>
             
         </div>
-        <div class="fmt-row" style="padding:160px">
+        <div class="fmt-row" style="padding:130px">
         </div>
 
         <div class="fmt-bottom" style="z-index: -3; padding: 100px; background-color: #010225; color: white">
