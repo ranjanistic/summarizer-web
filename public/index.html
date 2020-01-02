@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/Raleway.css">
+        <meta name="theme-color" content="#3f51b5">
+        <link rel="stylesheet" href="assets/fmt.css">
+        <link rel="icon" href="assets/summaricon.png">
+    <title>Summaryzer</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.6.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.6.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.6.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.6.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.6.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.6.1/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+    <style media="screen">
+      body {color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family: 'Raleway';
+        }
+     h2{
+         font-family: 'Raleway'
+     }
+     .fall-back{
+        background-image: url('assets/backMountGreen.svg');
+        font-family: 'Raleway';
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: #1580e4;
+        background-attachment: fixed;
+     }
+
+     .mount-back{
+         background-image: url('assets/mountgrad.svg');
+         background-repeat: no-repeat;
+         background-size: 100%;
+         background-attachment: fixed;
+     }
+     #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display:inline-block;
+      transition: top 1.5s;
+      box-shadow:0 8px 16px 0 #10009edc,0 6px 120px 0 #070857;
+    }
+
+    </style>
+  </head>
+
+<body bgcolor="#010225">
+        <div class="fmt-row " style="padding-bottom: 100px; background-color: #4b0082 " id="section1">
+            
+            <div class="fmt-col l8  fmt-hide-medium fmt-left fmt-round" style="margin-top: 93px">
+                <div class="fmt-card" style="border:#3f51b5 12px solid; border-top-right-radius: 25px">
+                <div class="fmt-row fmt-left" style="font-size: 44px; color:rgb(255, 255, 255); padding: 44px; margin: 22px">
+                    Welcome, Earthling!<br/><h2>Get the thing for which you came here.</h2>
+                </div>
+                <div class="fmt-row fmt-indigo ">
+                    <a href="https://github.com/ranjanistic/summarizer">
+                        <div class="fmt-col m4 fmt-hover-shadow fmt-right fmt-btn fmt-ripple  fmt-teal fmt-card fmt-round-large" style="font-size: 28px; padding:34px; margin: 40px" onclick="contri()">
+                            <object class="fmt-left" type="image/svg+xml" data="assets/github.svg" height="40px" width="40px"></object>
+                             Contribute
+                        </div>
+                    </a>
+                    <p class="fmt-left" style="margin-left: 72px; font-size: 20px">
+                        Search Google Play Store for</p>
+                    <br/><br/><br/>
+                    <div class="fmt-border-medium fmt-round-large fmt-border-black fmt-col l4" style="font-size: 22px; color:black; padding-left: 22px; margin-left: 72px">
+                        Summaryzer app
+                    </div>
+                </div>
+                </div>
+                <div class="fmt-row fmt-padding-32 fmt-center">
+                    <a href="#quickstart">
+                        <div class="fmt-button fmt-text-white fmt-transparent fmt-border-large fmt-round-jumbo fmt-hover-text-black" style="font-size: 23px; padding: 22px; margin-left: 62px" >
+                            Wut?
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="fmt-col l7 fmt-hover-shadow fmt-hide-large fmt-top fmt-round">
+                <div class="fmt-indigo " id="navbar" style="border-bottom-left-radius:44px;border-bottom-right-radius:44px">
+                    <div class="fmt-row fmt-left" style="font-size: 54px; color:rgb(255, 255, 255); padding: 66px;">
+                        Welcome, Earthling!<br/>
+                        <span style="font-size: 42px">Get the thing for which you came here.</span>
+                    </div>
+                    <div class="fmt-row ">
+                        <a href="https://github.com/ranjanistic/summarizer">
+                            <div class="fmt-col m4 fmt-hover-shadow fmt-right fmt-btn fmt-ripple fmt-card fmt-round-large" style="font-size: 28px; padding:34px; margin-bottom: 40px; margin-right: 40px; color: white; background-color: #2c30ff" id="contributtsmall" onclick="contri()">
+                                <object class="fmt-left" type="image/svg+xml" data="assets/github.svg" height="40px" width="40px"></object>
+                                Contribute
+                            </div>
+                        </a>
+                        <div class="fmt-col m2" style="margin-top:2px">
+                            <a href="#segmentSmall">
+                                <div class="fmt-button fmt-text-white fmt-transparent fmt-border-large fmt-round-jumbo fmt-hover-text-black fmt-ripple-hard" style="font-size: 23px; padding: 34px; margin-left: 62px" onclick="raiser()">
+                                    Wut?
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fmt-col l4 fmt-right fmt-hide-small fmt-hide-medium" style="margin-top: 50px">
+                    <object class="fmt-center" type="image/svg+xml" data="assets/summarizer-preview1.svg" width="100%"></object>
+                </div>
+            <div class="fmt-col l4 fmt-right fmt-hide-large" style="margin-top: 560px">
+                <object class="fmt-center" type="image/svg+xml" data="assets/summarizer-preview1.svg" width="100%"></object>
+            </div>
+        </div>
+
+        <div class="fmt-row fmt-purple "  id="section2">
+            
+            <div class="fmt-hide-large fmt-center" style="font-size: 74px; font-family: Raleway; color: white; padding-top: 200px"  id="segmentSmall">
+                What if...
+                <br>
+                <p class="fmt-center" style="font-size: 42px">
+                    You'll never know, right?
+                </p>
+            </div>
+            <div class="fmt-center fmt-hide-large" style="padding-top: 50px; padding-bottom: 100px">
+                <object class="fmt-left" type="image/svg+xml" data="assets/summarizer-preview2.svg" width="100%" id="secondpreview"></object>
+            </div>
+            <div class="fmt-row fmt-padding-32 fmt-right" style="margin-bottom: 50px; margin-right: 49px">
+                <a href="#iagreesmall">
+                <div class="fmt-btn fmt-center fmt-shadow fmt-round-large fmt-hide-large fmt-ripple-hard" style="padding: 22px; font-size: 45px; font-weight: lighter; background-color: #851b0d" id="iagreesmall"> 
+                    I agree
+                </div>
+                </a>
+            </div>
+            
+
+            <div class="fmt-col l4 fmt-left fmt-hide-medium fmt-hide-small" style="padding-top: 0px"  id="segment2">
+                <object class="fmt-left" type="image/svg+xml" data="assets/summarizer-preview2.svg" width="150%" id="secondpreview"></object>
+            </div>
+            <div class="fmt-col l5 fmt-right fmt-indigo fmt-hide-small fmt-hide-medium fmt-card fmt-round" style="padding: 100px; margin-top: 50px">
+                <div class="fmt-row fmt-center" style="font-size: 35px">
+                    What if...
+                </div>
+                <div class="fmt-padding-32" style="font-size: 25px; text-align: start">
+                    Most products and digital utilities have a terms and conditons doc, provided for you to read. Yet you know how 'short' it is.
+                    So you just skip the reading and agree to their terms. <br />
+                </div>
+                <a href="#section3">
+                <div class="fmt-btn fmt-right fmt-round-large fmt-teal fmt-ripple-hard" style="padding: 22px; font-size: 23px; font-weight: lighter" id="iagree"> 
+                     I agree
+                </div>
+                </a>
+            </div>
+        </div>
+
+        <div class=" fmt-row fmt-hide-small fmt-hide-medium fall-back" id="section3" style="padding-top:50px; padding-bottom: 50px">
+            <div class="fmt-col m3 fmt-round-jumbo fmt-left" style="margin-left: 20px">
+                <div class="fmt-row fmt-card fmt-round-jumbo" style="background-color: #851b0d; color: white">
+                    <div class="fmt-left" style="font-size: 33px; padding-top: 44px; padding-left: 44px; font-weight: bold">
+                        Also...
+                    </div>
+                    <div class="fmt-left" style="font-size: 20px; padding: 44px;">
+                        Sometimes you have another priority, yet you also want to read that news.
+                        But the text is too long, and not your time.
+                    </div>
+                </div>
+                <br /><br />
+                <div class="fmt-row fmt-card fmt-round-jumbo" style="background-color: #0d0f85; color: white">
+                    <div class="fmt-left" style="font-size: 33px; padding-top: 44px; padding-left: 44px">
+                        Plus...
+                    </div>
+                    <div class="fmt-left" style="font-size: 20px; padding: 44px;">
+                        You read an article and found that interesting, yet it is too big to be read swiftly.
+                    </div>
+                </div>
+            </div>
+            <div class="fmt-col m5 fmt-center" style="padding-top: 50px; padding-bottom: 50px; margin: 30px">
+                <object class="fmt-center" type="image/svg+xml" data="assets/summarizer-preview3.svg" width="90%" id="thirdpreview"></object>
+            </div>
+            <div class="fmt-col m3 fmt-card fmt-right fmt-black fmt-round-jumbo " style="margin-right: 20px; margin-top: 300px; padding: 20px ">
+                <p style="font-size: 44px; font-weight: bolder; text-align: center">So you do what?</p>
+                <p style="font-size: 23px;text-align: center">#AskSummaryzer</p>
+            </div>
+        </div>
+
+        <div class="fmt-hide-large fmt-center" style="background-color: #40545fff;border-radius:22px; margin-top: 20px" >
+            <div class="fmt-row" style="color: white; padding-top: 90px">
+                <span style="font-size: 50px">
+                    The text is too long,
+                </span><br/>
+                <span style="font-size: 33px">
+                    not your time.
+                </span>    
+            </div>
+            <div class="fmt-row" style="padding: 50px">
+                <object type="image/svg+xml" data="assets/summarizer-preview3.svg" width="95%" id="thirdpreviewsmall"></object>
+            </div>
+            <div class="fmt-row" style="color: white; padding: 60px">
+                <span style="font-size: 55px">
+                        Interesting,
+                </span>
+                <br/>
+                <span style="font-size: 33px">
+                    yet too big to be read swiftly.
+                </span>
+            </div>
+            <div class="fmt-row" style="color: white;padding: 60px">
+                <a href="#soyoudowhat">
+                <span class="fmt-btn fmt-round-jumbo" style="padding:70px;font-size: 55px;background-color: #bb0404a1" onclick="backout()" id="soyoudowhat">
+                  So you do what?
+                </span>
+                </a>
+            </div>
+            <div class="fmt-row" style="padding: 100px;">
+                <object type="image/svg+xml" data="assets/summarIconShadow.svg" width="80%" id="fourthpreviewsmall"></object>
+            </div>
+            <div style="color:white; font-weight: bold; font-size: 80px; padding-bottom: 100px">
+                #AskSummaryzer
+            </div>
+        </div>
+        <div class="fmt-center fmt-padding-large" id="quickstart">
+            <div class="fmt-card fmt-btn fmt-ripple-soft" style="margin: 44px;padding: 22px;border-radius:12px; background-color:#fff; color:black" onclick="alert('Not available yet.')">
+                <object type="image/svg+xml" style="margin-top:12px" data="assets/google-play-brands.svg" width="40px" id="fourthpreviewsmall"></object><br>Download now
+            </div>
+            
+        </div>
+        <div class="fmt-row" style="padding:130px">
+        </div>
+
+        <div class="fmt-bottom" style="z-index: -3; padding: 100px; background-color: #010225; color: white">
+            <div class="fmt-center" style="font-size: 20px;font-weight: lighter ">
+                Priyanshu Ranjan | Summaryzer Web | Copyright 2019
+                <br/><br/><br/>
+                Plagiarism Penalised.
+            </div>
+        </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+
+  let prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-270px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+
+    function backout(){
+        window.scrollTo(0,300);
+    }
+
+    function contri(){
+        let contsmallid = document.getElementById("contributtsmall");
+        let contlargeid = document.getElementById("contributtlarge");
+        let email = prompt('Application still under development. This will take you to the project under development on GitHub.\nYou can contribute to the project by submitting your email below, since the project is private. You\'ll be notified once your collaboration request is accepted.\n\nAfter the completion of project, this button will be replaced by Download.', 'Your Email/Github ID');
+        let examplestr = 'Your Email/Github ID'
+        if(email == examplestr || email=='' || email==null || email.charAt(0) == ' '){
+            alert('Your response was not legitimate.');
+        }
+        else{
+            alert('Your ID \''+ email+'\' has been recieved.\nWe\'ll respond shortly.');
+            let result = link("https://github.com/ranjanistic/summarizer");
+            contsmallid.innerHTML = result;
+        }
+    }
+
+    </script>
+  </body>
+</html>
